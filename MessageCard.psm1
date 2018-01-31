@@ -17,8 +17,9 @@
 	.EXAMPLE
     # Create a message and send it
     $act
-    $fct = New-MessageCardFact -name 'Date' -Value '2012-12-12'; New-MessageCardFact -name 'Info' -Value 'Multiple Facts are possible'
-    $sct = New-MessageCardSection -Title "This is a section test" -Text "This is text to show in this sections body, there can be multiple sections" -Facts $fct
+    $fct = New-MessageCardFact -name 'Date' -Value '2012-12-12';
+    $fct2 = New-MessageCardFact -name 'Info' -Value 'Multiple Facts are possible'
+    $sct = New-MessageCardSection -Title "This is a section test" -Text "This is text to show in this sections body, there can be multiple sections" -Facts $fct,$fct2
     $card = New-MessageCard -Title "The card title" -Sections $sct
     $uri = "https://outlook.office.com/webhook/your-uniq-hook-here"
     # Post it to Teams
